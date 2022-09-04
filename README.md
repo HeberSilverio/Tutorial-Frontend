@@ -7,6 +7,34 @@
 
 ## Iniciar um projeto e instalar pacotes (com npm e npx)
 
+### Vantagens do npx
+
+
+
+#### Executar um pacote instalado localmente com facilidade
+- Se quiser executar um pacote instalado localmente, tudo o que precisa fazer é digitar:
+
+`$ npx seu-pacote`. O npx verificará se o <comando> ou o <pacote> existe no $PATH ou nos arquivos binários do projeto local. Se estiver, eles o executarão.
+
+##### Executar pacotes que não estavam instalados previamente
+- É possível utilizar a função comando sem permanecer instalado a dependência. Exemplo: O `npx gitignore node` adiciona o arquivo gitignore e depois exclui a dependência gitignore.
+- Esta é uma grande vantagem, pois você tem a capacidade de executar um pacote que não estava instalado previamente. Vamos testar isso executando: `$ npx cowsay wow`
+
+Isso é ótimo porque, algumas vezes, você apenas quer usar algumas ferramentas de CLI, mas não quer instalá-las globalmente somente para fins de teste.
+
+Isso quer dizer que você pode economizar alguns espaço em disco e simplesmente executá-las somente quando precisar delas. Isso também significa que suas variáveis globais ficarão menos poluídas.
+
+#### Testar versões de pacotes diferentes
+- O npx torna muito fácil testar versões diferentes de um pacote ou de um módulo do Node.js. `npm v seu-pacote`.
+
+#### Conclusão
+O npx nos ajuda a evitar questões de versionamento e dependências, bem como a evitar a instalação de pacotes desnecessários que você queira apenas experimentar.
+
+Ele também fornece um modo claro e fácil de executar pacotes, comandos, módulos e até mesmo gists e repositórios do GitHub.
+
+#### Instale o npx
+Caso o **npx** não esteja disponível ao instalar o node.js você pode instalar manualmente utilizando o seguinte comando `npm i npx -g`.
+
 #### 1 - Crie ferramentas executadas diretamente da linha de comando
 Com o **NPM** nós podemos criar ferramentas executadas diretamente do terminal inteiramente com JavaScript.
 
@@ -63,7 +91,11 @@ O **NPM** é uma ferramenta que muitos usam mas poucos sabem usar totalmente o s
 
 
 ## node_modules e gitignore
+- O `npx gitignore node` adiciona o arquivo gitignore e depois exclui a dependência gitignore.
+
 ## npm-scripts
+- A propriedade "scripts" de seu arquivo package.json suporta vários scripts internos e seus eventos de ciclo de vida predefinidos, bem como scripts arbitrários.
+
 ## Configurar o npm
 ## Arquivos comuns em diversos projetos
 ## Semantic Version

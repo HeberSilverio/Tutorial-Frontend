@@ -6,6 +6,21 @@
 - Para instalar uma versão específica Utilize `npm install nome-do-pacote@4.3.1` para remover um pacote
 - Para instalar a versão mais atual utilize `npm install nome-do-pacote@latest`
 
+- `npm update nome-do-pacote` Este comando irá atualizar o pacote expecificado para a versão mais recente, respeitando as restrições semver.
+
+- `npm update` Este comando atualizará todos os pacotes listados para a versão mais recente (especificada pelo tagconfig), respeitando as restrições semver tanto do seu pacote quanto de suas dependências (se eles também exigirem o mesmo pacote).
+
+- `npm update --save`Atualiza todos os pacotes da dependencies.
+
+- `npm update --save-dev`Atualiza todos os pacotes da devDependencies.
+
+- `npm update --save-dev --save`Atualiza todos os pacotes, tanto da dependencies, quanto da devDependencies.
+
+
+- `npm update -g`Atualiza todos os pacotes globais.
+
+
+
 Para conhecer a documentação do npm clique aqui:
 [npm Docs](https://docs.npmjs.com/)
 ## Iniciar um projeto e instalar pacotes (com npm e npx)
@@ -119,7 +134,6 @@ Major . Minor . Patch
 2.0.0 //Mudou a escrita e métodos e irá quebrar códigos antigos.
 
 
-
 #### Para configurar o npm apenas no projeto
 Adicione na raiz do projeto um arquivo .npmrc
 
@@ -142,9 +156,17 @@ colocar no package.json
 }
 E rodar npm install e ver o que acontece
 ```
+"bootstrap": "~4.0.0", // **~** permite atualizar apenas o Patch
+"jquery": "^3.0.0", // **^** permite atualizar o Minor e também Patch
+"lodash": "4.0.0", // Permite apenas a instalação da versão exata.
 
 ## Arquivos comuns em diversos projetos
+Arquivo de liçença:
+`npx license "MIT" -o "HS Tech" > LICENSE` Gera o arquivo de linçença.
 
+`npx covgen "hebersilverio@gmail.com"` Gera o arquivo de código de conduta
+
+`echo "# Changelog" > CHANGELOG.md` // Gera o arquivo changelog
 
 Utilizar playlist do canal serfrontend
 https://youtu.be/iAHqJKWbifo

@@ -1,14 +1,16 @@
-# Primeiro projeto nodejs
+# Projeto com nodejs
 
 ## Utilizando o nodejs
 - Utilize `npm install nome-do-pacote` para inserir pacotes
 - Utilize `npm uninstall` para remover um pacote
 - Para instalar uma versão específica Utilize `npm install nome-do-pacote@4.3.1` para remover um pacote
+- Para instalar a versão mais atual utilize `npm install nome-do-pacote@latest`
 
+Para conhecer a documentação do npm clique aqui:
+[npm Docs](https://docs.npmjs.com/)
 ## Iniciar um projeto e instalar pacotes (com npm e npx)
 
 ### Vantagens do npx
-
 
 
 #### Executar um pacote instalado localmente com facilidade
@@ -97,8 +99,52 @@ O **NPM** é uma ferramenta que muitos usam mas poucos sabem usar totalmente o s
 - A propriedade "scripts" de seu arquivo package.json suporta vários scripts internos e seus eventos de ciclo de vida predefinidos, bem como scripts arbitrários.
 
 ## Configurar o npm
+`npm set init.author.name "Héber Silvério"`
+`npm set init.author.email "hebersilverio@gmail.com"`
+`npm set init.author.url "https://hebersilverio.github.io/Curriculo/"`
+`npm set init.licence "MIT"`
+`npm set init.version "0.0.0"`
+
+Essas informações serão amarzenadas no arquivo que está neste endereço: 
+C:\Users\Windows\.npmrc
+
+## Semantic version
+
+Veja a tudo sobre isso neste site: [Semantic version](https://semver.org/lang/pt-BR/)
+Major . Minor . Patch
+1.0.0
+1.0.1 //Correção de bug é acrescentado apenas no Patch
+1.0.2 //Correção de bug é acrescentado apenas no Patch
+1.1.0 //Uma nova feature já será acrescentado na Minor e com a nova feature zera o Patch
+2.0.0 //Mudou a escrita e métodos e irá quebrar códigos antigos.
+
+
+
+#### Para configurar o npm apenas no projeto
+Adicione na raiz do projeto um arquivo .npmrc
+
+##### Possíveis configurações
+Coloque no arquivo .npmrc
+`progress = false` //Retirar a barra de progresso ao instalar uma dependência:
+`save-prefix = '~'` //Muda a instalação de ^ para ~ no package.json
+`save-exact = true` // ao dar um novo npn install vai sempre instalar apenas a versão que está no package.json
+
+O Sinal de **^** permite ao dar um novo npn install seu-pacote atualizar o Minor e também Patch
+O Sinal de **~** permite ao dar um novo npn install seu-pacote atualizar apenas o Patch
+
+```
+Exercicio:
+colocar no package.json
+"dependencies": {
+   "bootstrap": "~4.0.0",
+   "jquery": "^3.0.0",
+   "lodash": "4.0.0",
+}
+E rodar npm install e ver o que acontece
+```
+
 ## Arquivos comuns em diversos projetos
-## Semantic Version
+
 
 Utilizar playlist do canal serfrontend
 https://youtu.be/iAHqJKWbifo

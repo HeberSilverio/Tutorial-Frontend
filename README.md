@@ -34,7 +34,7 @@ Para conhecer a documentação do npm clique aqui:
 `$ npx seu-pacote`. O npx verificará se o <comando> ou o <pacote> existe no $PATH ou nos arquivos binários do projeto local. Se estiver, eles o executarão.
 
 ##### Executar pacotes que não estavam instalados previamente
-- É possível utilizar a função comando sem permanecer instalado a dependência. Exemplo: O `npx gitignore node` adiciona o arquivo gitignore e depois exclui a dependência gitignore.
+- É possível utilizar a função comando sem permanecer instalado a dependência. Exemplo: O `npx gitignore node` adiciona o arquivo gitignore modelo node e depois exclui a dependência gitignore.
 - Esta é uma grande vantagem, pois você tem a capacidade de executar um pacote que não estava instalado previamente. Vamos testar isso executando: `$ npx cowsay wow`
 
 Isso é ótimo porque, algumas vezes, você apenas quer usar algumas ferramentas de CLI, mas não quer instalá-las globalmente somente para fins de teste.
@@ -123,6 +123,12 @@ O **NPM** é uma ferramenta que muitos usam mas poucos sabem usar totalmente o s
 Essas informações serão amarzenadas no arquivo que está neste endereço: 
 C:\Users\Windows\.npmrc
 
+###
+É possível recuperar valores de configurações do npm. Se você utilizar o **get** ele vai buscar nas configurações do npm qual o valor está setado, exemplo:
+
+`npm get init.license` - vai mostrar qual o tipo da licença deste projeto
+`npm get init.author.name` - vai mostrar o nome do author do projeto
+
 ## Semantic version
 
 Veja a tudo sobre isso neste site: [Semantic version](https://semver.org/lang/pt-BR/)
@@ -150,23 +156,23 @@ O Sinal de **~** permite ao dar um novo npn install seu-pacote atualizar apenas 
 Exercicio:
 colocar no package.json
 "dependencies": {
-   "bootstrap": "~4.0.0",
-   "jquery": "^3.0.0",
-   "lodash": "4.0.0",
+   "bootstrap": "~4.0.0", // **~** permite atualizar apenas o Patch
+   "jquery": "^3.0.0", // **^** permite atualizar o Minor e também Patch
+   "lodash": "4.0.0", // Permite apenas a instalação da versão exata.
 }
 E rodar npm install e ver o que acontece
 ```
-"bootstrap": "~4.0.0", // **~** permite atualizar apenas o Patch
-"jquery": "^3.0.0", // **^** permite atualizar o Minor e também Patch
-"lodash": "4.0.0", // Permite apenas a instalação da versão exata.
 
 ## Arquivos comuns em diversos projetos
-Arquivo de liçença:
-`npx license "MIT" -o "HS Tech" > LICENSE` Gera o arquivo de linçença.
 
-`npx covgen "hebersilverio@gmail.com"` Gera o arquivo de código de conduta
+`npx license "MIT" -o "HS Tech" > LICENSE` - Gera o arquivo de linçença.
 
-`echo "# Changelog" > CHANGELOG.md` // Gera o arquivo changelog
+`npx covgen "hebersilverio@gmail.com"` - Gera o arquivo de código de conduta
+
+`echo "# Changelog" > CHANGELOG.md` - Gera o arquivo changelog
+
+
+**o arquivo .bash_profile possui uma função que inicializa os arquivos mais comuns em um projeto node.**
 
 Utilizar playlist do canal serfrontend
 https://youtu.be/iAHqJKWbifo

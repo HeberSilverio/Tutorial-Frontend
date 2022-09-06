@@ -1,6 +1,12 @@
-# Projeto com nodejs
+# Como Iniciar um Projeto e Instalar Pacotes (com npm e npx)
+Para conhecer a documentação do npm clique aqui:
+[npm Docs](https://docs.npmjs.com/)
 
-## Utilizando o nodejs
+
+**O primeiro passo do projeto é iniciar o projeto do node para instalar as dependências:**
+`npm init -y`
+
+## Utilizando o npm
 - Utilize `npm install nome-do-pacote` para inserir pacotes
 - Utilize `npm uninstall` para remover um pacote
 - Para instalar uma versão específica Utilize `npm install nome-do-pacote@4.3.1` para remover um pacote
@@ -20,10 +26,6 @@
 - `npm update -g`Atualiza todos os pacotes globais.
 
 
-
-Para conhecer a documentação do npm clique aqui:
-[npm Docs](https://docs.npmjs.com/)
-## Iniciar um projeto e instalar pacotes (com npm e npx)
 
 ### Vantagens do npx
 
@@ -174,5 +176,5 @@ E rodar npm install e ver o que acontece
 
 **o arquivo .bash_profile possui uma função que inicializa os arquivos mais comuns em um projeto node.**
 
-Utilizar playlist do canal serfrontend
-https://youtu.be/iAHqJKWbifo
+Créditos deste estudo: Utilizei a playlist do canal  [serfrontend](https://youtu.be/iAHqJKWbifo)
+

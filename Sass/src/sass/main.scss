@@ -1,9 +1,10 @@
-$bg: aqua;
+$bg1: aqua;
+$bg2: #ccc;
 body {
-   background-color: $bg;
+   background-color: $bg2;
 }
 h1 {
-   color: blue;
+   color: #000;
 }
 p {
    color: rgb(45, 203, 39);

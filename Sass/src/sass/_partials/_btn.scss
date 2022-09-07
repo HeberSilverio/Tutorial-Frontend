@@ -1,0 +1,63 @@
+@mixin btn($cor: black, $size: small) {
+   background-color: $black-200;
+   border: none;
+   margin: 15px;
+   padding: 15px;
+   @if $size == larger {
+      font-size: 24px;
+   } @else {
+      font-size: 14px;
+   }
+   
+   border-radius: 5px;
+}
+@function limitePixel($min: 10px){
+   @return $min - 5px;
+}
+
+.botao  {
+   background-color: $black-200;
+   border: none;
+   color: #ffffff;
+   margin: 15px;
+   padding: 15px;
+   font-size: 14px;
+   border-radius: limitePixel(12px); // Neste caso está sendo passado 12px parametro - 5px = 7px;
+   transition: all .5s;
+
+   &:hover {
+      background-color: $secondary-hover;
+   }
+}
+.banner {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: $white;
+   padding: 50px;
+   margin-bottom: 25px;
+   
+   &__btn {
+      // @include btn;
+      @extend .botao;
+      color: #fff;
+      background-color: $zap-black;
+      
+      &:hover {
+         background-color: $secondary-hover;
+      }
+
+         &--danger {
+            @include btn($warning, larger);
+            // @extend .botao;
+            @extend .banner__btn;
+            background-color: darken($primary, 25%);
+            border: 1px solid #0056b3;
+
+            &:hover {
+               background-color: $primary-hover;
+            }
+         }
+         
+   }
+}

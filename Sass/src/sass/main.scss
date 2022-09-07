@@ -90,21 +90,24 @@ body {
       // @include btn;
       @extend .botao;
       color: #fff;
-      background: $zap-black;
+      background-color: $zap-black;
+      
+      &:hover {
+         background-color: $secondary-hover;
+      }
 
          &--danger {
             // @include btn;
-            @extend .botao;
-            background-color: $zap-grey3;
+            // @extend .botao;
+            @extend .banner__btn;
+            background-color: $zap-grey1;
             border: 1px solid #0056b3;
 
             &:hover {
                background-color: $primary-hover;
             }
          }
-         &:hover {
-            background-color: $secondary-hover;
-         }
+         
    }
 }
 

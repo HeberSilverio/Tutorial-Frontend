@@ -39,7 +39,6 @@ No arquivo package.json você pode acrescentar o scripts `"css": "node-sass src/
 
 
 ## Capitulo 05 - Sass
-[serfrontend](https://youtu.be/__Uwj8JP7NM)
 
 ## Nesting(aninhamento)
 ![](nesting)
@@ -98,3 +97,6 @@ Usar o `@extend` permite compartilhar um conjunto de propriedades CSS de um sele
 
 Neste exemplo abaixo eu reutilizei as propriedades css de `botao` também em `banner__btn` e também em `banner__btn--danger` e Após copilado ficará assim: <br>
 `.botao, .banner__btn, .banner__btn--danger {`
+
+## placeholder
+Parei no início do vídeo 5 [serfrontend](https://youtu.be/__Uwj8JP7NM)

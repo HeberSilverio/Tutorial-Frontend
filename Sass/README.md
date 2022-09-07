@@ -1,13 +1,4 @@
-**Sass**
-[TOCM]
-
-[TOC]
-#Capitulo 04 - Sass
-#Node Sass
-#Principais concorrentes do Sass
-
-## Capitulo 04 - Sass
-[serfrontend](https://youtu.be/V95cpQ0cgII)
+## Principais comandos - Sass
 
 **O primeiro passo do projeto é iniciar o projeto do node para instalar as dependências:**
 `npm init -y`
@@ -39,14 +30,14 @@ Utilize o comando `npx node-sass src/sass/ -o dist/css/`
 #### Você pode colocar no script no package.json
 No arquivo package.json você pode acrescentar o scripts `"css": "node-sass src/sass/ -o dist/css/"` e depois pode executar através do comando `npm run css`
 
-## Para automatizar a copilação Sass
+### Para automatizar a copilação Sass
 
 - Para automatizar basta acrescentar `-w`. 
 No arquivo package.json você pode acrescentar o scripts `"css": "node-sass src/sass/ -o dist/css/ -w"` e depois pode executar através do comando `npm run css`
 
 
 
-## Capitulo 05 - Sass
+## Nesting, Escopo, BEM, Mixin, Condicional no Sass
 
 ## Nesting(aninhamento)
 ![](https://github.com/HeberSilverio/Tutorial-Frontend/blob/main/Sass/src/img/nesting.JPG)
@@ -206,6 +197,9 @@ Neste exemplo abaixo eu reutilizei as propriedades css de `botao` também em `ba
 `.botao, .banner__btn, .banner__btn--danger {`
 
 ## placeholder
+Sass tem um tipo especial de seletor conhecido como “placeholder”. Parece e age muito como um seletor de classe, mas começa com % e não é incluído na saída CSS. Na verdade, qualquer seletor complexo (aqueles entre as vírgulas) que contém um seletor de espaço reservado não é incluído no CSS, nem qualquer regra de estilo cujos seletores contenham todos os espaços reservados.
+
+Para que serve um seletor que não é emitido? Ainda pode ser prorrogado! Ao contrário dos seletores de classe, os placeholders não sobrecarregam o CSS se não forem estendidos e não exigem que os usuários de uma biblioteca usem nomes de classe específicos para seu HTML.
 
 ## Funções Css
 Através das funções incluídas no código CSS é possível trabalhar com algumas variáveis e operações lógicas que podem facilitar muito a maneira como o construímos.

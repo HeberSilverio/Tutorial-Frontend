@@ -1,0 +1,16 @@
+{
+  "name": "projeto-anima-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "node-sass src/sass -o dist/css -w"
+  },
+  "keywords": [],
+  "author": "“Heber” <academiahv1@gmail.com~> (https://hebersilverio.github.io/Curriculo/)",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

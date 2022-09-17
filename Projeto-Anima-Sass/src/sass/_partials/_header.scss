@@ -1,0 +1,95 @@
+.header-animado {
+   $h: 450px;
+   $w_cenario: 2400px;
+
+   background-color: $main-color;
+   width: 95vw;
+   box-shadow: 0 12px 11px -7px rgba(0, 0, 0,.8);
+   max-height: 90vh;
+   padding-top: 20px;
+   overflow: hidden;
+
+   .container{
+      max-width: 90%; 
+      margin: auto;
+   }
+
+   &__title{
+      color: darken($main-color, 30%);
+      font-size: 30px;
+   }
+
+   &__subtitle{
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.5;
+      font-weight: 300;
+   }
+   
+   &__ilustra
+      {
+      background-image: url(../../dist/img/eagle-lee.jpg);
+      height: $h;
+      background-size: auto 100%;
+      background-position: center top;
+
+      &>div{
+         display: none;
+         widows: $w_cenario * 2;
+         }
+      @media screen and (min-width: 480px){
+         background-image: url(../../dist/img/imgFundo.png);
+
+         @keyframes anima_cenario {
+               from{
+                  transform: translateX(100%) translateY(0);
+               }
+                  
+               to{
+                  transform: translateX(0%) translateY(0);
+               }
+            }
+      }
+
+      @media screen and (min-width: 960px){
+         background-image: url(../../dist/img/cidade-rua-e-carros-87.jpg);
+         height: $h;
+         position: relative;
+         z-index: 1;
+
+         &>div{
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+         }
+      }
+
+      @mixin anima($imagem, $tempo, $direcao: reverse ){
+         background-image: url(../../dist/img/#{$imagem}.png);
+         background-repeat: no-repeat;
+         animation: anima_cenario #{$tempo} linear infinite #{$direcao};
+         background-size: 50px;
+         
+      }
+
+      $anima_elements:  'plane' 5s normal,
+                        'casas' 30s,
+                        'rua' 30s,
+                        'carrosCima' 15s,
+                        'carrosBaixo' 45s ;
+      
+
+      @each $el, $tempo, $dir in $anima_elements {
+         @if not $dir{
+            $dir: reverse;
+         }
+         .#{$el} {
+            @include anima(#{$el}, $tempo, $dir);
+         }
+            
+      }
+   }      
+}

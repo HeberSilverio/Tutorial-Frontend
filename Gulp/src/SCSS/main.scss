@@ -1,0 +1,23 @@
+@import "./_section/header";
+
+$bg: #d8e8ea;
+html, body{
+   height: 100%;
+}
+img {
+   width: 50%;
+}
+body{
+   background-color: $bg;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+}
+h1{
+   font: 1.6em sans-serif;
+}
+#output{
+   font: 1.4em sans-serif;
+   color: #77d7c8;
+}
